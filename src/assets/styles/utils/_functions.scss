@@ -1,0 +1,4 @@
+@function fontParameter($mainFont, $wghtAndStyle) {
+	$result: "family=#{$mainFont}:ital,wght@#{$wghtAndStyle}&display=swap";
+	@return $result;
+}

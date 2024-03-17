@@ -1,0 +1,34 @@
+{
+    "name": "oc-p12-sportsee-03-2024",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "dev:network": "vite --host",
+        "build": "vite build",
+        "preview": "vite preview",
+        "preview:network": "vite preview --host",
+        "lint": "eslint ./src/**/*.jsx",
+        "lint:fix": "eslint --fix ./src/**/*.jsx"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+        "@types/react": "^18.2.56",
+        "@types/react-dom": "^18.2.19",
+        "@vitejs/plugin-react": "^4.2.1",
+        "eslint": "^8.57.0",
+        "eslint-config-react-app": "^7.0.1",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-jsx-a11y": "^6.8.0",
+        "eslint-plugin-react": "^7.34.0",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.5",
+        "sass": "^1.72.0",
+        "vite": "^5.1.4"
+    }
+}

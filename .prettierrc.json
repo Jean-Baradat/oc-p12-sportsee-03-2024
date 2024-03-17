@@ -1,0 +1,19 @@
+{
+	"semi": false,
+	"singleQuote": false,
+	"tabWidth": 2,
+	"useTabs": true,
+	"endOfLine": "lf",
+	"arrowParens": "avoid",
+	"printWidth": 80,
+	"singleAttributePerLine": true,
+	"bracketSameLine": false,
+	"overrides": [
+		{
+			"files": "*.scss",
+			"options": {
+				"printWidth": 80
+			}
+		}
+	]
+}

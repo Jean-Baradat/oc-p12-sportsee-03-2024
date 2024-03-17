@@ -1,0 +1,45 @@
+/**
+ * Helpers classes
+ */
+
+.min-height-adjustment {
+	min-height: calc(
+		100vh - ($mainNavHeight + $headerDesktopMarginTop + $mainFooterHeight)
+	);
+
+	@include media-max($xsBreakpoint) {
+		& {
+			min-height: calc(
+				100vh - ($mainNavHeight + $headerMobileMarginTop + $mainFooterHeight)
+			);
+		}
+	}
+}
+
+.centered-container {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 6.25rem;
+
+	@include media-max($mdBreakpoint) {
+		& {
+			padding: 0 3rem;
+		}
+	}
+
+	@include media-max($smBreakpoint) {
+		& {
+			padding: 0 1.25rem;
+		}
+	}
+}
+
+.remove-btn-default-style {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
