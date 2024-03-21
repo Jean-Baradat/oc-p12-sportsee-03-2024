@@ -8,6 +8,9 @@
 	"printWidth": 80,
 	"singleAttributePerLine": true,
 	"bracketSameLine": false,
+	"plugins": [
+		"prettier-plugin-tailwindcss"
+	],
 	"overrides": [
 		{
 			"files": "*.scss",
