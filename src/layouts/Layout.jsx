@@ -4,11 +4,11 @@ import Header from "@layouts/header/Header"
 
 const Layout = () => {
 	return (
-		<main className="grid h-screen grid-cols-auto-1fr grid-rows-auto-1fr overflow-auto">
+		<div className="grid h-screen grid-cols-auto-1fr grid-rows-auto-1fr overflow-auto font-medium">
 			<Header />
 			<Aside />
 			<main>test</main>
-		</main>
+		</div>
 	)
 }
 
