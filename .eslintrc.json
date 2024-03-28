@@ -11,6 +11,20 @@
         "sourceType": "module"
     },
     "rules": {
+        "no-restricted-imports": [
+            "error",
+            {
+                "patterns": [
+                    {
+                        "group": [
+                            "../*",
+                            "./"
+                        ],
+                        "message": "Please use the @/ alias instead of relative paths."
+                    }
+                ]
+            }
+        ],
         "react/no-array-index-key": "warn",
         "no-nested-ternary": "off",
         "max-len": [
