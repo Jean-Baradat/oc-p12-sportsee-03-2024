@@ -6,23 +6,23 @@ import item4 from "@layouts/aside/assets/item-4.svg"
 
 const Aside = () => {
 	return (
-		<aside className="shadow-aside flex h-full w-28 flex-col justify-between bg-secondary">
+		<aside className="flex h-full w-28 flex-col justify-between bg-secondary shadow-aside">
 			<div className="mt-10 flex grow flex-col items-center justify-center gap-4">
 				<img
 					src={item1}
-					alt=""
+					alt="Meditation"
 				/>
 				<img
 					src={item2}
-					alt=""
+					alt="Swimming"
 				/>
 				<img
 					src={item3}
-					alt=""
+					alt="Bike"
 				/>
 				<img
 					src={item4}
-					alt=""
+					alt="Workout"
 				/>
 			</div>
 			<div className="relative h-56">

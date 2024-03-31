@@ -3,7 +3,7 @@ import logo from "@layouts/header/assets/logo.svg"
 
 const Header = () => {
 	return (
-		<header className="shadow-header col-span-2 h-24 bg-secondary">
+		<header className="col-span-2 h-24 bg-secondary shadow-header">
 			<nav className="flex h-full w-full items-center justify-between gap-10 px-7">
 				<div className="flex items-center gap-3 transition-colors">
 					<div className="size-14">

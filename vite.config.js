@@ -8,8 +8,9 @@ export default defineConfig({
 		// If you add an alias, also add it to jsconfig.json
 		alias: {
 			"@": "/src",
-			"@page": "/src/page",
+			"@pages": "/src/pages",
 			"@layouts": "/src/layouts",
+			"@components": "/src/components",
 		},
 	},
 })
