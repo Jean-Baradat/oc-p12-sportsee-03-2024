@@ -1,7 +1,7 @@
 import React from "react"
 import { createBrowserRouter } from "react-router-dom"
 import Layout from "@/layouts/Layout"
-import Home from "@pages/Home"
+import Home from "@pages/home/Home"
 import NotFound from "@/pages/NotFound"
 import ErrorBoundary from "@/pages/ErrorBoundary"
 import Login from "@pages/Login"

@@ -17,16 +17,36 @@ const Header = () => {
 				</div>
 				<ul className="flex w-full justify-between gap-16 pl-10 pr-10 text-2xl text-white lg:pl-32 lg:pr-24">
 					<li>
-						<NavLink to="">Accueil</NavLink>
+						<NavLink
+							to=""
+							className="hover:underline"
+						>
+							Accueil
+						</NavLink>
 					</li>
 					<li>
-						<NavLink to="">Profil</NavLink>
+						<NavLink
+							to=""
+							className="hover:underline"
+						>
+							Profil
+						</NavLink>
 					</li>
 					<li>
-						<NavLink to="">Réglage</NavLink>
+						<NavLink
+							to=""
+							className="hover:underline"
+						>
+							Réglage
+						</NavLink>
 					</li>
 					<li>
-						<NavLink to="">Communauté</NavLink>
+						<NavLink
+							to=""
+							className="hover:underline"
+						>
+							Communauté
+						</NavLink>
 					</li>
 				</ul>
 			</nav>

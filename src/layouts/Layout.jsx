@@ -23,7 +23,13 @@ const Layout = () => {
 		<div className="grid h-screen grid-cols-auto-1fr grid-rows-auto-1fr overflow-auto font-medium">
 			<Header />
 			<Aside />
-			<Outlet context={[user]} />
+			{!user ? (
+				<main className="m-24">Chargement des données...</main>
+			) : user instanceof Error ? (
+				<main className="m-24">Error</main>
+			) : (
+				<Outlet context={[user]} />
+			)}
 		</div>
 	)
 }
