@@ -11,18 +11,22 @@ const Aside = () => {
 				<img
 					src={item1}
 					alt="Meditation"
+					className="cursor-pointer transition-all hover:scale-105"
 				/>
 				<img
 					src={item2}
 					alt="Swimming"
+					className="cursor-pointer transition-all hover:scale-105"
 				/>
 				<img
 					src={item3}
 					alt="Bike"
+					className="cursor-pointer transition-all hover:scale-105"
 				/>
 				<img
 					src={item4}
 					alt="Workout"
+					className="cursor-pointer transition-all hover:scale-105"
 				/>
 			</div>
 			<div className="relative h-56">

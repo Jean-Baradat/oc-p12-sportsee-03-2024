@@ -1,5 +1,6 @@
 import React from "react"
 import logo from "@layouts/header/assets/logo.svg"
+import { NavLink } from "react-router-dom"
 
 const Header = () => {
 	return (
@@ -15,10 +16,18 @@ const Header = () => {
 					<h1 className="text-2xl font-normal text-primary">SportSee</h1>
 				</div>
 				<ul className="flex w-full justify-between gap-16 pl-10 pr-10 text-2xl text-white lg:pl-32 lg:pr-24">
-					<li>Accueil</li>
-					<li>Profil</li>
-					<li>Réglage</li>
-					<li>Communauté</li>
+					<li>
+						<NavLink to="">Accueil</NavLink>
+					</li>
+					<li>
+						<NavLink to="">Profil</NavLink>
+					</li>
+					<li>
+						<NavLink to="">Réglage</NavLink>
+					</li>
+					<li>
+						<NavLink to="">Communauté</NavLink>
+					</li>
 				</ul>
 			</nav>
 		</header>

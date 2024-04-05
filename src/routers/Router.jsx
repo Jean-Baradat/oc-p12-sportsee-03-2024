@@ -3,18 +3,28 @@ import { createBrowserRouter } from "react-router-dom"
 import Layout from "@/layouts/Layout"
 import Home from "@pages/Home"
 import NotFound from "@/pages/NotFound"
+import ErrorBoundary from "@/pages/ErrorBoundary"
+import Login from "@pages/Login"
 
 const Router = createBrowserRouter([
 	{
 		path: "/",
+		element: <Login />,
+	},
+	{
+		path: "/:id/home",
 		element: <Layout />,
-		errorElement: <NotFound />,
+		errorElement: <ErrorBoundary />,
 		children: [
 			{
-				path: "/",
+				path: "/:id/home",
 				element: <Home />,
 			},
 		],
+	},
+	{
+		path: "*",
+		element: <NotFound />,
 	},
 ])
 

@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { FaArrowRightLong } from "react-icons/fa6"
+import { PropTypes } from "prop-types"
 
 /**
  * This component is a link button.
@@ -26,6 +27,11 @@ const ButtonLinkTo = ({ to, content }) => {
 			<span className="invisible relative">{content}</span>
 		</Link>
 	)
+}
+
+ButtonLinkTo.propTypes = {
+	to: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
 }
 
 export default ButtonLinkTo
