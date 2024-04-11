@@ -24,13 +24,13 @@ const Home = () => {
 					Félicitation ! Vous avez explosé vos objectifs hier 👏
 				</p>
 			</div>
-			<div className="xl:grid-cols-3fr-1fr grid h-full grid-cols-1 grid-rows-3 gap-8 xl:grid-rows-2">
+			<div className="grid h-full grid-cols-1 grid-rows-3 gap-8 xl:grid-cols-3fr-1fr xl:grid-rows-2">
 				<article className="col-start-1 col-end-2 row-start-1 row-end-2 rounded-md bg-tertiary xl:col-start-1 xl:col-end-2 xl:row-start-1 xl:row-end-1">
 					Graph 1
 				</article>
 				<section className="col-start-1 col-end-2 row-start-3 row-end-4 xl:col-start-1 xl:col-end-2 xl:row-start-2 xl:row-end-3">
 					<article className="rounded-md bg-primary">Graph 1</article>
-					<article className="bg-secondary2 rounded-md">Graph 2</article>
+					<article className="rounded-md bg-secondary2">Graph 2</article>
 					<article className="rounded-md bg-tertiary">Graph 3</article>
 				</section>
 				<section className="col-start-1 col-end-2 row-start-2 row-end-3 flex flex-col justify-between gap-4 xl:col-start-2 xl:col-end-3 xl:row-start-1 xl:row-end-3">

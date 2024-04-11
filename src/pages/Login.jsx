@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-// https://tailwindcomponents.com/components/tailwind-css-input-by-material-tailwind
-
 /**
  * This component is the login page used to simplify testing.
  *
