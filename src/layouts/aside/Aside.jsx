@@ -32,7 +32,7 @@ const Aside = () => {
 				</div>
 				<div className="relative h-56 min-h-56">
 					<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] whitespace-nowrap text-xs text-white">
-						Copiryght, SportSee 2020
+						Copiryght, SportSee 2024
 					</div>
 				</div>
 			</div>
