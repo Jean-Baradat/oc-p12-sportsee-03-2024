@@ -5,7 +5,8 @@ import carbsIcon from "@pages/home/assets/carbs-icon.svg"
 import lipidsIcon from "@pages/home/assets/lipids-icon.svg"
 import proteinsIcon from "@pages/home/assets/proteins-icon.svg"
 import KeyDataCard from "@components/KeyDataCard"
-import GroupedBarChart from "@/components/GroupedBarChart"
+import GroupedBarChart from "@components/GroupedBarChart"
+import LineChart from "@components/LineChart"
 
 const Home = () => {
 	const [user] = useOutletContext()
@@ -27,8 +28,10 @@ const Home = () => {
 				<article className="col-start-1 col-end-2 row-start-1 row-end-2 rounded-md bg-tertiary lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-1 lg:h-[265.5px]">
 					<GroupedBarChart data={user.USER_ACTIVITY.sessions} />
 				</article>
-				<section className="col-start-1 col-end-2 row-start-3 row-end-4 grid grid-cols-3 grid-rows-1 gap-8 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3">
-					<article className="rounded-md bg-primary">Graph 1</article>
+				<section className="col-start-1 col-end-2 row-start-3 row-end-4 grid grid-cols-3 grid-rows-1 gap-8 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3 lg:h-[265.5px]">
+					<article className="rounded-md bg-primary">
+						<LineChart data={user.USER_AVERAGE_SESSIONS.sessions} />
+					</article>
 					<article className="rounded-md bg-secondary2">Graph 2</article>
 					<article className="rounded-md bg-tertiary">Graph 3</article>
 				</section>

@@ -7,12 +7,12 @@ const BarChart = ({ data }) => {
 	const [parentWidth, setParentWidth] = useState(0)
 
 	// Creating the tooltip
-	let tooltip = d3.select("main").select("div.tooltip")
+	let tooltip = d3.select("main").select("div.tooltip-grouped-bar-chart")
 	if (tooltip.empty()) {
 		tooltip = d3
 			.select("main")
 			.append("div")
-			.attr("class", "tooltip")
+			.attr("class", "tooltip-grouped-bar-chart")
 			.attr(
 				"style",
 				`position: absolute;
