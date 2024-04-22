@@ -7,9 +7,12 @@ import proteinsIcon from "@pages/home/assets/proteins-icon.svg"
 import KeyDataCard from "@components/KeyDataCard"
 import GroupedBarChart from "@components/GroupedBarChart"
 import LineChart from "@components/LineChart"
+import DonutChart from "@components/DonutChart"
 
 const Home = () => {
 	const [user] = useOutletContext()
+
+	console.log(user)
 
 	return (
 		<main className="mx-16 my-12 flex flex-col justify-between gap-y-12 xl:mx-24">
@@ -33,7 +36,11 @@ const Home = () => {
 						<LineChart data={user.USER_AVERAGE_SESSIONS.sessions} />
 					</article>
 					<article className="rounded-md bg-secondary2">Graph 2</article>
-					<article className="rounded-md bg-tertiary">Graph 3</article>
+					<article className="rounded-md bg-tertiary">
+						<DonutChart
+							data={user.USER_MAIN_DATA.todayScore || user.USER_MAIN_DATA.score}
+						/>
+					</article>
 				</section>
 				<section className="col-start-1 col-end-2 row-start-2 row-end-3 flex flex-col justify-between gap-4 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-3">
 					<KeyDataCard

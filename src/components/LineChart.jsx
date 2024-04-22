@@ -82,7 +82,7 @@ const LineChart = ({ data }) => {
 				.style("width", "100%")
 				.style("height", "100%")
 
-			//
+			// Reset all SVG content
 			svg.selectAll("*").remove()
 
 			// Creation of the x axis
