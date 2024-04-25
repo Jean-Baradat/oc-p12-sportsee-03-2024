@@ -8,11 +8,10 @@ import KeyDataCard from "@components/KeyDataCard"
 import GroupedBarChart from "@components/GroupedBarChart"
 import LineChart from "@components/LineChart"
 import DonutChart from "@components/DonutChart"
+import RadarChart from "@components/RadarChart"
 
 const Home = () => {
 	const [user] = useOutletContext()
-
-	console.log(user)
 
 	return (
 		<main className="mx-16 my-12 flex flex-col gap-y-12 xl:mx-auto xl:w-4/5">
@@ -27,15 +26,17 @@ const Home = () => {
 					Félicitation ! Vous avez explosé vos objectifs hier 👏
 				</p>
 			</div>
-			<div className="grid grid-cols-1 grid-rows-300px-auto-1000px gap-8 lg:grid-cols-3fr-1fr lg:grid-rows-260px-260px">
+			<div className="grid grid-cols-1 grid-rows-300px-auto-1000px gap-4 lg:grid-cols-3fr-1fr lg:grid-rows-260px-260px xl:gap-8">
 				<article className="col-start-1 col-end-2 row-start-1 row-end-2 rounded-md bg-tertiary lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-1">
 					<GroupedBarChart data={user.USER_ACTIVITY.sessions} />
 				</article>
-				<section className="col-start-1 col-end-2 row-start-3 row-end-4 grid grid-cols-1 grid-rows-3 gap-8 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3 lg:grid-cols-3 lg:grid-rows-1">
+				<section className="col-start-1 col-end-2 row-start-3 row-end-4 grid grid-cols-1 grid-rows-3 gap-4 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3 lg:grid-cols-3 lg:grid-rows-1 xl:gap-8">
 					<article className="rounded-md bg-primary">
 						<LineChart data={user.USER_AVERAGE_SESSIONS.sessions} />
 					</article>
-					<article className="rounded-md bg-secondary2">Graph 2</article>
+					<article className="rounded-md bg-secondary2">
+						<RadarChart data={user.USER_PERFORMANCE} />
+					</article>
 					<article className="rounded-md bg-tertiary">
 						<DonutChart
 							data={user.USER_MAIN_DATA.todayScore || user.USER_MAIN_DATA.score}
