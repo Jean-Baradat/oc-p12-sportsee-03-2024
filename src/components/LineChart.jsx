@@ -27,7 +27,9 @@ const LineChart = ({ data }) => {
 				border-radius: .2rem;
 				font-size: 0.8rem;
 				gap: 1rem;
-				box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;`,
+				box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+				opacity: 0;
+				transition: opacity 0.3s ease;`,
 			)
 	}
 
@@ -172,11 +174,16 @@ const LineChart = ({ data }) => {
 						.style("stroke", "rgba(255, 255, 255, 0.2)")
 						.style("stroke-width", 10)
 
-					tooltip.style("visibility", "visible").html(`
+					tooltip
+						.style("visibility", "visible")
+						.html(
+							`
 						<span>
 							${d.sessionLength} min
 						</span>
-						`)
+						`,
+						)
+						.style("opacity", "1")
 				})
 				.on("mousemove", event => {
 					tooltip
@@ -186,13 +193,13 @@ const LineChart = ({ data }) => {
 				.on("mouseout", (event, _) => {
 					d3.select(event.currentTarget).style("fill", "transparent")
 
-					var nextElement = event.currentTarget.nextSibling
+					let nextElement = event.currentTarget.nextSibling
 					while (nextElement) {
 						d3.select(nextElement).style("fill", "transparent")
 						nextElement = nextElement.nextSibling
 					}
 
-					tooltip.style("visibility", "hidden")
+					tooltip.style("visibility", "hidden").style("opacity", "0")
 
 					svg.selectAll("circle.circle-line-chart").remove()
 				})

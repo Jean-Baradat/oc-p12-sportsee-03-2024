@@ -30,8 +30,8 @@ const DonutChart = ({ data }) => {
 	}, [])
 
 	useEffect(() => {
-		const size = Math.min(parentWidth * 1.35, parentHeight)
-		const outerRadius = size / 2 - 50
+		const size = Math.min(parentWidth * 1.25, parentHeight)
+		const outerRadius = size / 2 - 40
 		const innerRadius = outerRadius * 0.85
 
 		if (parentHeight && parentWidth) {

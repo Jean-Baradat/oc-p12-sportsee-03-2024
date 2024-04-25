@@ -15,7 +15,7 @@ const Home = () => {
 	console.log(user)
 
 	return (
-		<main className="mx-16 my-12 flex flex-col justify-between gap-y-12 xl:mx-24">
+		<main className="mx-16 my-12 flex flex-col gap-y-12 xl:mx-auto xl:w-4/5">
 			<div>
 				<h1 className="mb-10 text-5xl">
 					Bonjour{" "}
@@ -27,11 +27,11 @@ const Home = () => {
 					Félicitation ! Vous avez explosé vos objectifs hier 👏
 				</p>
 			</div>
-			<div className="grid h-full grid-cols-1 grid-rows-3 gap-8 lg:grid-cols-3fr-1fr lg:grid-rows-2">
-				<article className="col-start-1 col-end-2 row-start-1 row-end-2 rounded-md bg-tertiary lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-1 lg:h-[265.5px]">
+			<div className="grid grid-cols-1 grid-rows-300px-auto-1000px gap-8 lg:grid-cols-3fr-1fr lg:grid-rows-260px-260px">
+				<article className="col-start-1 col-end-2 row-start-1 row-end-2 rounded-md bg-tertiary lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-1">
 					<GroupedBarChart data={user.USER_ACTIVITY.sessions} />
 				</article>
-				<section className="col-start-1 col-end-2 row-start-3 row-end-4 grid grid-cols-3 grid-rows-1 gap-8 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3 lg:h-[265.5px]">
+				<section className="col-start-1 col-end-2 row-start-3 row-end-4 grid grid-cols-1 grid-rows-3 gap-8 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3 lg:grid-cols-3 lg:grid-rows-1">
 					<article className="rounded-md bg-primary">
 						<LineChart data={user.USER_AVERAGE_SESSIONS.sessions} />
 					</article>

@@ -23,6 +23,8 @@ export default {
 			},
 			gridTemplateRows: {
 				"auto-1fr": "auto 1fr",
+				"260px-260px": "260px 260px",
+				"300px-auto-1000px": "300px auto 1000px",
 			},
 		},
 	},

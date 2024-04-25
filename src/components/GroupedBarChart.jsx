@@ -27,7 +27,9 @@ const BarChart = ({ data }) => {
 				border-radius: .2rem;
 				font-size: 0.8rem;
 				gap: 1rem;
-				box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;`,
+				box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+				opacity: 0;
+				transition: opacity 0.3s ease;`,
 			)
 	}
 
@@ -247,14 +249,19 @@ const BarChart = ({ data }) => {
 						"fill",
 						"rgba(196, 196, 196, 0.40)",
 					)
-					tooltip.style("visibility", "visible").html(`
+					tooltip
+						.style("visibility", "visible")
+						.html(
+							`
 						<span>
 							${d.kilogram}kg
 						</span>
 						<span>
 							${d.calories}kCal
 						</span>
-						`)
+						`,
+						)
+						.style("opacity", "1")
 				})
 				.on("mousemove", event => {
 					tooltip
@@ -263,7 +270,7 @@ const BarChart = ({ data }) => {
 				})
 				.on("mouseout", (event, _) => {
 					d3.select(event.currentTarget).style("fill", "transparent")
-					tooltip.style("visibility", "hidden")
+					tooltip.style("visibility", "hidden").style("opacity", "0")
 				})
 		}
 	}, [data, parentHeight, parentWidth, tooltip])
