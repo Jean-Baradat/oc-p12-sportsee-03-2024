@@ -15,6 +15,9 @@ const Home = () => {
 
 	return (
 		<main className="mx-16 my-12 flex flex-col gap-y-12 xl:mx-auto xl:w-4/5">
+			<div className="absolute bottom-1 right-1 text-sm text-gray-300">
+				Data mode: <span className="uppercase">{user.MODE}</span>
+			</div>
 			<div>
 				<h1 className="mb-10 text-5xl">
 					Bonjour{" "}
