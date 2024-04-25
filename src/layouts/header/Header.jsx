@@ -2,6 +2,13 @@ import React from "react"
 import logo from "@layouts/header/assets/logo.svg"
 import { NavLink } from "react-router-dom"
 
+/**
+ * Header is the site's main navigation menu. It includes the NavLink
+ *
+ * @todo Mobile version
+ *
+ * @returns ReactElement
+ */
 const Header = () => {
 	return (
 		<header className="sticky top-0 col-span-2 h-24 bg-secondary shadow-header">

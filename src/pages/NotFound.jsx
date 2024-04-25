@@ -1,6 +1,13 @@
 import React from "react"
 import ButtonLinkTo from "@/components/ButtonLinkTo"
 
+/**
+ * NotFound is a component used when navigating the route below:
+ *
+ * { path: "*", element: <NotFound /> }
+ *
+ * @returns ReactElement
+ */
 const NotFound = () => {
 	return (
 		<main className="flex h-screen flex-col items-center justify-evenly gap-8">

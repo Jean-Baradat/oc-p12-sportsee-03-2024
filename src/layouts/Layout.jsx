@@ -4,6 +4,16 @@ import Header from "@layouts/header/Header"
 import { Outlet, useParams } from "react-router-dom"
 import { getUserData } from "@/services/apiService"
 
+/**
+ * Layout is used for the overall architecture of the app
+ *
+ * This page contains the Header and the Aside, as well as the rendered
+ * content in the event of error or data loading
+ *
+ * @todo To be developed: loading page + error page
+ *
+ * @returns ReactElement
+ */
 const Layout = () => {
 	const [user, setUser] = useState(null)
 	let { id } = useParams()

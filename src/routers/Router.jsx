@@ -6,6 +6,9 @@ import NotFound from "@/pages/NotFound"
 import ErrorBoundary from "@/pages/ErrorBoundary"
 import Login from "@pages/Login"
 
+/**
+ * Router is an array of the application's hard routes
+ */
 const Router = createBrowserRouter([
 	{
 		path: "/",

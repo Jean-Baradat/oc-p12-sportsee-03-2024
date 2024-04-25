@@ -4,6 +4,13 @@ import item2 from "@layouts/aside/assets/item-2.svg"
 import item3 from "@layouts/aside/assets/item-3.svg"
 import item4 from "@layouts/aside/assets/item-4.svg"
 
+/**
+ * Aside is the application's global vertical menu
+ *
+ * @todo Navigation
+ *
+ * @returns ReactElement
+ */
 const Aside = () => {
 	return (
 		<aside className="h-full w-28 bg-secondary shadow-aside">

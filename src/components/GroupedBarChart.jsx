@@ -1,6 +1,17 @@
 import React, { useEffect, useRef, useState } from "react"
 import * as d3 from "d3"
 
+/**
+ * Chart developed with D3.js
+ *
+ * This chart is a grouped axis graph
+ *
+ * @author Jean Baradat
+ * @version 1.0.0
+ *
+ * @param {object} data - user data
+ * @returns ReactElement
+ */
 const BarChart = ({ data }) => {
 	const ref = useRef()
 	const [parentHeight, setParentHeight] = useState(0)
@@ -34,7 +45,8 @@ const BarChart = ({ data }) => {
 	}
 
 	/**
-	 *
+	 * This function is executed at creation time and each time the size of the user's
+	 * window changes. It retrieves the height and width of ref.current's parent element
 	 */
 	const handleResize = () => {
 		setParentHeight(
@@ -45,6 +57,9 @@ const BarChart = ({ data }) => {
 		)
 	}
 
+	/**
+	 * Used to add an event listener to resize and to destroy it
+	 */
 	useEffect(() => {
 		window.addEventListener("resize", handleResize)
 

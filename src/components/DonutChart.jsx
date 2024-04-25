@@ -1,6 +1,17 @@
 import React, { useEffect, useRef, useState } from "react"
 import * as d3 from "d3"
 
+/**
+ * Chart developed with D3.js
+ *
+ * This chart is a donut graph
+ *
+ * @author Jean Baradat
+ * @version 1.0.0
+ *
+ * @param {number} data - score number
+ * @returns ReactElement
+ */
 const DonutChart = ({ data }) => {
 	const ref = useRef()
 	const [parentHeight, setParentHeight] = useState(0)
@@ -8,7 +19,8 @@ const DonutChart = ({ data }) => {
 	const [dataReady] = useState([data, 1 - data])
 
 	/**
-	 *
+	 * This function is executed at creation time and each time the size of the user's
+	 * window changes. It retrieves the height and width of ref.current's parent element
 	 */
 	const handleResize = () => {
 		setParentHeight(
@@ -19,6 +31,9 @@ const DonutChart = ({ data }) => {
 		)
 	}
 
+	/**
+	 * Used to add an event listener to resize and to destroy it
+	 */
 	useEffect(() => {
 		window.addEventListener("resize", handleResize)
 

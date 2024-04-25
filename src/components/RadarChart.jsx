@@ -1,13 +1,25 @@
 import React, { useEffect, useRef, useState } from "react"
 import * as d3 from "d3"
 
+/**
+ * Chart developed with D3.js
+ *
+ * This chart is a simple radar
+ *
+ * @author Jean Baradat
+ * @version 1.0.0
+ *
+ * @param {object} data - user data
+ * @returns ReactElement
+ */
 const RadarChart = ({ data }) => {
 	const ref = useRef()
 	const [parentHeight, setParentHeight] = useState(0)
 	const [parentWidth, setParentWidth] = useState(0)
 
 	/**
-	 *
+	 * This function is executed at creation time and each time the size of the user's
+	 * window changes. It retrieves the height and width of ref.current's parent element
 	 */
 	const handleResize = () => {
 		setParentHeight(
@@ -18,6 +30,9 @@ const RadarChart = ({ data }) => {
 		)
 	}
 
+	/**
+	 * Used to add an event listener to resize and to destroy it
+	 */
 	useEffect(() => {
 		window.addEventListener("resize", handleResize)
 
@@ -56,9 +71,11 @@ const RadarChart = ({ data }) => {
 			const adjustTextPositionY = [8, 16, 8, 0, -8, 0]
 
 			/**
+			 * Used to normalize data for the chart
 			 *
-			 * @param {*} data
-			 * @returns
+			 * @param {object} data
+			 * @param {number} normalizationValue
+			 * @returns {object} valuesArrayOutOfHundred
 			 */
 			const normalizeValues = (data, normalizationValue) => {
 				let maxValue = 0
@@ -80,9 +97,12 @@ const RadarChart = ({ data }) => {
 			}
 
 			/**
+			 * Used to create chart polygons
 			 *
-			 * @param {*} size
-			 * @returns
+			 * @param {number} size
+			 * @param {boolean} isMain
+			 * @param {object} data
+			 * @returns {string}
 			 */
 			const handlePolygon = (size, isMain, data) => {
 				let points = []
@@ -122,9 +142,11 @@ const RadarChart = ({ data }) => {
 			}
 
 			/**
+			 * Used to create the data shape
 			 *
-			 * @param {*} data
-			 * @returns
+			 * @param {object} data
+			 * @param {number} size
+			 * @returns {string}
 			 */
 			const handleShape = (data, size) => {
 				let points = []
@@ -142,6 +164,7 @@ const RadarChart = ({ data }) => {
 				return points.join(" ")
 			}
 
+			// Creates multiple polygons based on the polygon.number variable
 			for (let i = 0; i < polygon.number; i++) {
 				let isMain = false
 				let polySize = size - 170 - polygon.spacing * i
@@ -160,6 +183,7 @@ const RadarChart = ({ data }) => {
 				}
 			}
 
+			// Corresponds to the data polygon
 			svg
 				.append("polygon")
 				.attr("points", handleShape(data, size))

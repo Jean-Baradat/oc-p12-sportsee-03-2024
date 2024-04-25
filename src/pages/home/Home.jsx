@@ -10,6 +10,10 @@ import LineChart from "@components/LineChart"
 import DonutChart from "@components/DonutChart"
 import RadarChart from "@components/RadarChart"
 
+/**
+ * Home is the application's home page
+ * @returns ReactElement
+ */
 const Home = () => {
 	const [user] = useOutletContext()
 
