@@ -1,6 +1,6 @@
 # Welcome aboard, captain
 
-![Demo image](demo.png)
+![image](https://github.com/Jean-Baradat/oc-p12-sportsee-03-2024/assets/73848974/a6055d45-2445-4276-ad8b-59e3f195e9a7)
 
 This project is the 12th in the course OpenClassrooms "Développez un tableau de bord d'analytics avec React" course. It introduces students to React JS with complex data and varied sources, as well as to the use of external libraries (NPM) such as D3 (used here).
 
