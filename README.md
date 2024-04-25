@@ -27,7 +27,7 @@ Download the project by saving it in a directory on your computer:
 git clone https://github.com/Jean-Baradat/OC-p11-kasa-01-2024.git
 ```
 
-You'll also need a project representing a back data server:
+You'll also need a project representing a local API server:
 Available here: [P9-front-end-dashboard](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 
 This server is not required to run the local, but we'll see how to use it later.
@@ -59,7 +59,7 @@ yarn
 yarn dev
 ```
 
-Your back server is launched, but the application won't know its path.
+Your local API is launched, but the application won't know its path.
 
 You need to create the following file in the directory root:
 
@@ -73,7 +73,7 @@ Then after the colons, add the local URL of your local API server that you launc
 
 > You should have something like VITE_API_URL=http://localhost:3000/user/
 
-The back is launched, the application has its environment variables, there's just one step left.
+The local API server is launched, the application has its environment variables, there's just one step left.
 
 #### Build 
 
